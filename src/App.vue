@@ -7,8 +7,12 @@
   </main>
 </template>
 
-<script setup>
-</script>
+<script>
+import { useTaskStore } from "@/stores/TaskStore";
 
-<style scoped>
-</style>
+export default {
+  setup(){
+    const taskStore = useTaskStore();
+  }
+}
+</script>
