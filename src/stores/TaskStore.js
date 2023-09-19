@@ -8,6 +8,7 @@ export const useTaskStore = defineStore('taskStore', {
         ],
         name: 'Adnan'
     }),
+    // like computed functionality
     getters: {
         favs() {
             return this.tasks.filter(t => t.isFav)
@@ -19,6 +20,12 @@ export const useTaskStore = defineStore('taskStore', {
         },
         totalCount: (state) => {
             return state.tasks.length
+        }
+    },
+    // like functions
+    actions : {
+        addTask(task){
+            this.tasks.push(task);
         }
     }
 })
